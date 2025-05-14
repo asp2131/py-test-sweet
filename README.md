@@ -72,10 +72,8 @@ Key components of `unittest` include:
 | **Unit Testing**    | Testing individual components or functions of software in isolation.                                            |
 | **Test Case**       | A class containing test methods that validate specific parts of the code.                                       |
 | **Assertion**       | A statement that a condition must be true; if false, the test fails.                                            |
-| **Test Fixture**    | Code that prepares the environment for testing and cleans up afterward.                                         |
 | **Test Suite**      | A collection of test cases that work together.                                                                  |
 | **Test Runner**     | The program that runs the tests and reports results.                                                            |
-| **Mock Object**     | An object that simulates the behavior of real objects for testing purposes.                                     |
 
 </div>
 
