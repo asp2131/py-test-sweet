@@ -12,11 +12,8 @@
   - [TODO 1: Create Your First Test Case](#todo-1-create-your-first-test-case)
   - [TODO 2: Test Numeric Functions](#todo-2-test-numeric-functions)
   - [TODO 3: Test String Functions](#todo-3-test-string-functions)
-  - [TODO 4: Setup and Teardown](#todo-4-setup-and-teardown)
-  - [TODO 5: Test Exception Handling](#todo-5-test-exception-handling)
-  - [TODO 6: Run Tests with Command Line](#todo-6-run-tests-with-command-line)
+  - [TODO 4: Run Tests with Command Line](#todo-4-run-tests-with-command-line)
   - [CHALLENGE: Create a Test Suite](#challenge-create-a-test-suite)
-  - [CHALLENGE: Test a Custom Class](#challenge-test-a-custom-class)
 
 <br><br>
 
@@ -30,8 +27,6 @@ You'll be learning to:
 
 - **Write basic test cases** that validate functions work as expected
 - **Implement different assertion methods** to check various conditions
-- **Structure test code** using setup/teardown methods for efficient testing
-- **Test for exceptions** to ensure your code handles errors correctly
 - **Run tests** from the command line with various options
 
 By the end, you'll have a solid foundation in writing unit tests with Python's unittest framework, a skill essential for creating reliable software. Let's get started! 🐍
@@ -48,12 +43,10 @@ This project includes specific requirements that focus on both understanding and
 
 | Requirement                                | Description                                                                                                      | Points |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- | ------ |
-| **TODO 1: Create Your First Test Case**    | Create a basic test class and write your first test method for a simple function.                                | 15%    |
-| **TODO 2: Test Numeric Functions**         | Implement tests for functions that perform mathematical operations, using appropriate numeric assertions.        | 15%    |
-| **TODO 3: Test String Functions**          | Write tests for string manipulation functions using string-appropriate assertion methods.                        | 15%    |
-| **TODO 4: Setup and Teardown**             | Implement setUp and tearDown methods to prepare test environments and clean up after tests.                      | 20%    |
-| **TODO 5: Test Exception Handling**        | Create tests that verify functions correctly raise exceptions when expected.                                    | 15%    |
-| **TODO 6: Run Tests with Command Line**    | Learn to execute tests using command-line options and interpret test results effectively.                        | 20%    |
+| **TODO 1: Create Your First Test Case**    | Create a basic test class and write your first test method for a simple function.                                | 25%    |
+| **TODO 2: Test Numeric Functions**         | Implement tests for functions that perform mathematical operations, using appropriate numeric assertions.        | 25%    |
+| **TODO 3: Test String Functions**          | Write tests for string manipulation functions using string-appropriate assertion methods.                        | 25%    |
+| **TODO 4: Run Tests with Command Line**    | Learn to execute tests using command-line options and interpret test results effectively.                        | 25%    |
 
 <br><br>
 
@@ -65,7 +58,7 @@ Key components of `unittest` include:
 
 - **TestCase Class**: The basic building block for test cases.
 - **Assertion Methods**: Methods like `assertEqual()`, `assertTrue()`, and others that test specific conditions.
-- **Test Fixtures**: Setup and teardown methods that prepare the test environment and clean up afterward.
+
 - **Test Runner**: A component that orchestrates the execution of tests and provides the outcome to the user.
 
 ---
@@ -300,104 +293,9 @@ Your tests should pass if the functions work correctly.
 
 <br><br><br><br>
 
-## **TODO 4: Setup and Teardown**
+## **TODO 4: Run Tests with Command Line**
 
-🎯 **Goal:** Learn to use setUp and tearDown methods to prepare the test environment.
-
----
-
-### Step-by-Step Instructions
-
-1. **Open the `test_fixtures.py` file**
-
-   - In this file, you'll find a `ShoppingCart` class with methods to add items and calculate the total.
-   - Your task is to create tests for this class using setUp and tearDown methods.
-
-2. **Create a Test Class**
-
-   - Define a class called `TestShoppingCart` that inherits from `unittest.TestCase`.
-
-3. **Implement setUp Method**
-
-   - Create a `setUp` method that will run before each test.
-   - Inside this method, create a new `ShoppingCart` object and assign it to `self.cart`.
-
-4. **Implement tearDown Method**
-
-   - Create a `tearDown` method that will run after each test.
-   - Inside this method, set `self.cart` to `None`.
-
-5. **Test Adding Items**
-
-   - Create a method called `test_add_item`.
-   - Add an item to `self.cart` with `self.cart.add_item("apple", 1.0)`.
-   - Use `assertEqual()` to check that `self.cart.items` contains one item with the expected name and price.
-
-6. **Test Calculating Total**
-   - Create a method called `test_calculate_total`.
-   - Add multiple items to `self.cart`.
-   - Use `assertEqual()` to check that `self.cart.calculate_total()` returns the expected sum.
-
----
-
-### ✅ **Check Your Work!**
-
-Run your test file with:
-```bash
-python test_fixtures.py
-```
-
-Your tests should pass if the `ShoppingCart` class works correctly.
-
-<br><br><br><br>
-
-## **TODO 5: Test Exception Handling**
-
-🎯 **Goal:** Write tests that verify functions correctly raise exceptions when expected.
-
----
-
-### Step-by-Step Instructions
-
-1. **Open the `test_exceptions.py` file**
-
-   - In this file, you'll find a `divide()` function that divides two numbers and raises a `ValueError` if the divisor is zero.
-   - Your task is to create tests that verify this behavior.
-
-2. **Create a Test Class**
-
-   - Define a class called `TestExceptions` that inherits from `unittest.TestCase`.
-
-3. **Test Normal Division**
-
-   - Create a method called `test_normal_division`.
-   - Use `assertEqual()` to check that `divide(10, 2)` returns `5.0`.
-
-4. **Test Division by Zero**
-   - Create a method called `test_division_by_zero`.
-   - Use `assertRaises()` to check that `divide(10, 0)` raises a `ValueError`.
-   - You can use the context manager syntax:
-   ```python
-   with self.assertRaises(ValueError):
-       divide(10, 0)
-   ```
-
----
-
-### ✅ **Check Your Work!**
-
-Run your test file with:
-```bash
-python test_exceptions.py
-```
-
-Your tests should pass if the `divide()` function correctly handles division by zero.
-
-<br><br><br><br>
-
-## **TODO 6: Run Tests with Command Line**
-
-🎯 **Goal:** Learn to run tests using command-line options and interpret test results.
+**Goal:** Learn to run tests using command-line options and interpret test results.
 
 ---
 
@@ -483,60 +381,7 @@ python test_suite.py
 
 You should see output indicating which tests were run as part of the suite.
 
-<br><br><br><br>
 
-## **CHALLENGE: Test a Custom Class**
-
-🎯 **Goal:** Write tests for a more complex custom class.
-
----
-
-### Step-by-Step Instructions
-
-1. **Open the `test_custom_class.py` file**
-
-   - In this file, you'll find a `BankAccount` class with methods for deposit, withdrawal, and checking the balance.
-   - Your task is to create comprehensive tests for this class.
-
-2. **Create a Test Class**
-
-   - Define a class called `TestBankAccount` that inherits from `unittest.TestCase`.
-
-3. **Implement Setup**
-
-   - Create a `setUp` method that initializes a `BankAccount` with an initial balance.
-
-4. **Test Initialization**
-
-   - Create a method called `test_initialization`.
-   - Verify that the account is correctly initialized with the given balance.
-
-5. **Test Deposit**
-
-   - Create a method called `test_deposit`.
-   - Test depositing amounts and verify the balance is updated correctly.
-
-6. **Test Withdrawal**
-
-   - Create a method called `test_withdrawal`.
-   - Test withdrawing amounts and verify the balance is updated correctly.
-
-7. **Test Insufficient Funds**
-   - Create a method called `test_insufficient_funds`.
-   - Verify that attempting to withdraw more than the balance raises an exception.
-
----
-
-### ✅ **Check Your Work!**
-
-Run your test file with:
-```bash
-python test_custom_class.py
-```
-
-Your tests should pass if the `BankAccount` class works correctly.
-
----
 
 ### Push Reminder
 

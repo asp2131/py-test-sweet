@@ -5,7 +5,7 @@ import unittest
 # TODO: Import test classes from previous files
 # from test_basics import TestBasics
 # from test_numeric import TestNumeric
-# Etc...
+# from test_strings import TestStrings
 
 def create_test_suite():
     """
