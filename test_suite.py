@@ -15,7 +15,7 @@ def create_test_suite():
         A test suite with all test cases
     """
     # TODO: Create a test suite
-    suite = unittest.TestSuite()
+    
     
     # TODO: Add test cases to the suite
     # suite.addTest(unittest.makeSuite(TestBasics))
