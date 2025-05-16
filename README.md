@@ -321,19 +321,19 @@ Your tests should pass if the functions work correctly.
 
    - Run only the tests in a specific file:
    ```bash
-   python -m unittest test_basics
+   python -m unittest test_strings
    ```
 
 5. **Run a Specific Test Case**
    - Run only a specific test case:
    ```bash
-   python -m unittest test_basics.TestBasics
+   python -m unittest test_strings.TestStrings
    ```
 
 6. **Run a Specific Test Method**
    - Run only a specific test method:
    ```bash
-   python -m unittest test_basics.TestBasics.test_is_even
+   python -m unittest test_strings.TestStrings.test_concatenate
    ```
 
 ---
@@ -358,7 +358,7 @@ Try each of the command-line options and observe the differences in the output. 
 
 2. **Import Test Classes**
 
-   - Import the test classes from the previous TODO tasks.
+   - Import the test classes from the previous TODO tasks. You can import the modules and then access the classes, or you can use the `from ... import ...` syntax, which you can search for examples of online.
 
 3. **Create a Test Suite**
 
